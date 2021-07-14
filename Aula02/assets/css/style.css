@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Uchen&display=swap');
+
+
+
+
+
+*{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+    
+
+}
+
+
+
+
+img{
+
+    margin-left: 43rem;
+    
+    width: 20%;
+    height: 20%;
+
+}
+
+nav h1{
+    
+    font-family: 'Zen Tokyo Zoo', cursive;
+    
+    text-align: center;
+    
+    margin-top: 1.4rem;
+    margin-bottom: 1.1rem;
+}
+
+body p#paragrafo{
+
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Uchen', serif;
+    font-weight: 400;
+    
+    padding: 5rem;
+
+}
+
+
+body div#p{
+
+    background-color:cornflowerblue;
+    width: 100%;
+    /* padding: 5rem; */
+    
+    
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Uchen', serif;
+    font-weight: 400;
+    font-size: 3ch;
+    
+    
+
+}
+
+body div#p{
+    
+    
+    
+    text-align: center;
+    color:rgb(255, 255, 255);
+    
+    
+}
+
+body div ol{
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-left: 1.2rem;
+
+}
+
+
+body div ol li{
+
+    color: black;
+    padding: 60px;
+}
+
+body div#sequencia{
+
+    text-decoration: none;
+    padding: 5rem;
+
+}
