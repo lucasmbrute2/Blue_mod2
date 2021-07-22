@@ -19,18 +19,24 @@
    </header>
 
    <section>
+      
+      {% if itens != [] %}
+      <a href="/clear">Limpar Lista</a>
+      {% endif %}
+     
+      <ul>
+         
+         {% for item in itens %}
+         <li class='itens'>
+            {{item}}
+         </li>
+
+         {% endfor %}
+        
+      </ul>
     
       
 
-      <ul>
-        <!-- Varre a lista itens, mostrando item por item na li -->
-        {% for item in itens%} 
-        <li>
-        {{item}}
-        </li> 
-        {% endfor %}
-        
-      </ul>
    </section>
 
    <script src="../static/js/script.js"></script>
