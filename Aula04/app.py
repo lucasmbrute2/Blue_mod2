@@ -10,9 +10,9 @@ def index():  #Aqui é uma função normal.
 
 
 @app.route("/new", methods=["POST","GET"])
-def new_title():
+def new():
     if request.method == 'POST':
-        item = request.form['item']
+        item = request.form['item'] #é criada uma variável para receber oq o input está mandando, no caso o name é 'item' por isso fica dessa forma: request.form['item'].
         itens.append(item)
         return redirect('/')
 
@@ -37,9 +37,11 @@ def limpar():
 
 
 
-# @app.route('/contato')   Testando abrir outra página
+# @app.route('/contato')   #Testando abrir outra página
 # def index2():
 #     return render_template('index2.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
