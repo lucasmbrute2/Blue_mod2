@@ -24,7 +24,7 @@ def limpar():
 
 
 
-@app.route('/newPage')
+@app.route('/newPage') #criei uma nova página
 def nova_pagina():
     return render_template('index2.html', itens = itens )
 
@@ -34,7 +34,7 @@ def volta_pagina():
     return redirect('/')
 
 
-@app.route('/newButton', methods = ['POST', 'GET'])
+@app.route('/newButton', methods = ['POST', 'GET']) #Aqui eu criei um botão para mudar de página mantendo a lista (apenas como teste)
 def novo_item():
     item = request.form['item']
     itens.append(item)
@@ -42,9 +42,6 @@ def novo_item():
 
 
 
-# @app.route('/contato')   #Testando abrir outra página
-# def index2():
-#     return render_template('index2.html')
 
 
 if __name__ == '__main__':
