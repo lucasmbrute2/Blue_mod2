@@ -3,10 +3,10 @@ from flask import Flask, render_template , request , redirect
 app = Flask(__name__)
 itens = []
 
-
-@app.route("/")
-def index():
-    return render_template("index.html", titulo = "Mudando titulo", itens= itens)
+#Para acessar o back-end são necesessárias as rotas para estabelecerem as conexões, como abaixo, na "route". O caminho "/" é padrão, a tela inicial do site.
+@app.route("/") #toda rota deve obrigatoriamente começar com "/"
+def index():  #Aqui é uma função normal.
+    return render_template("index.html", titulo = "Nice title Bro", itens= itens) #render_template renderiza uma página.
 
 
 @app.route("/new", methods=["POST","GET"])
@@ -21,6 +21,17 @@ def new_title():
 def limpar():
     itens.clear()
     return redirect('/')
+
+
+
+@app.route('/newRoute')
+def index2():
+    return render_template('index2.html')
+
+
+
+
+
 
 
 if __name__ == '__main__':

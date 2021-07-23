@@ -1,4 +1,6 @@
 const itens = document.querySelectorAll('.itens')
+let botao = document.querySelector('#mudarPagina')
+
 
 itens.forEach((item)=>{
     item.addEventListener('click',() =>{
