@@ -24,9 +24,6 @@ def limpar():
 
 
 
-@app.route('/newRoute')
-def index2():
-    return render_template('index2.html')
 
 
 
@@ -34,6 +31,15 @@ def index2():
 
 
 
+
+
+
+
+
+
+# @app.route('/contato')   Testando abrir outra página
+# def index2():
+#     return render_template('index2.html')
 if __name__ == '__main__':
     app.run(debug=True)
 
