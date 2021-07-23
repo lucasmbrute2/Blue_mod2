@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <title>Página2</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../static/css/style.css">
+   <title>To do List</title>
 </head>
 <body>
-    
+
+   <header>
+      <h1>{{titulo}}</h1>
+      <!-- action envia o form para a rota /new com o método POST depois que o botão submit é clicado -->
+      <form action="/newButton" method="POST">
+         <input type="text" name="item" id="item" placeholder="Adicione uma tarefa">
+         <button type="submit">Adicionar</button>
+      </form>
+   </header>
+
    <section>
+      
+      
+     
+      <ul>
+         
+         {% for item in itens %}
+         <li class='itens'>
+            {{item}}
+         </li>
+
+         {% endfor %}
         
-        {% if itens != [] %}
-        <a href="/clear">Limpar Lista</a>
-        {% endif %}
-       
-        <ul>
-           
-           {% for item in itens %}
-           <li class='itens'>
-              {{item}}
-           </li>
-  
-           {% endfor %}
-          
-        </ul>
+      </ul>
 
+     
+      <a href="/voltar">Um botão que volta para a página anterior</a>
 
-        </section>
-    </body>
+   
+</section>
+   
+   <script src="../static/js/script.js"></script>
+</body>
 </html>

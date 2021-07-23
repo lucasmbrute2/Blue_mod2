@@ -6,7 +6,7 @@ itens = []
 #Para acessar o back-end são necesessárias as rotas para estabelecerem as conexões, como abaixo, na "route". O caminho "/" é padrão, a tela inicial do site.
 @app.route("/") #toda rota deve obrigatoriamente começar com "/"
 def index():  #Aqui é uma função normal.
-    return render_template("index.html", titulo = "Nice title Bro", itens= itens) #render_template renderiza uma página.
+    return render_template("index.html", titulo = "TO DO LIST", itens= itens) #render_template renderiza uma página.
 
 
 @app.route("/new", methods=["POST","GET"])
@@ -24,16 +24,21 @@ def limpar():
 
 
 
+@app.route('/newPage')
+def nova_pagina():
+    return render_template('index2.html', itens = itens )
 
 
+@app.route('/voltar')
+def volta_pagina():
+    return redirect('/')
 
 
-
-
-
-
-
-
+@app.route('/newButton', methods = ['POST', 'GET'])
+def novo_item():
+    item = request.form['item']
+    itens.append(item)
+    return redirect('/newPage')
 
 
 
